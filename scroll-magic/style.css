@@ -7,6 +7,9 @@ ul{
 .section--cover{
   background-color: #1bbc9b;
 }
+.section--cover h1{
+  width: 100%;
+}
 .section--basic{
   background-color: #4BBFC3;
 }
