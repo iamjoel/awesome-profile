@@ -1,0 +1,30 @@
+body, h1, h2 {
+  margin: 0;
+}
+ul{
+  margin-top: 0;
+}
+.section--cover{
+  background-color: #1bbc9b;
+}
+.section--basic{
+  background-color: #4BBFC3;
+}
+.section--tech-overview{
+  background-color: #7BAABE;
+}
+.section--work-experience{
+  background-color: whitesmoke;
+}
+.section--project-mno{
+  background-color: #ccddff;
+}
+.section--project-pqr{
+  background-color: #1bbc9b;
+}
+h1{
+  text-align: center;
+}
+.section{
+  padding: 0 10px;
+}
