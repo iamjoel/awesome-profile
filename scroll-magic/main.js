@@ -1,29 +1,27 @@
 $(document).ready(function() {
   var winHeight = $(window).height()
   var winWidth = $(window).width()
-  $('#main .section').height(winHeight)
+  $('.sections, .section--cover').height(winHeight)
   var controller = new ScrollMagic.Controller()
 
   // cover
   ;(function() {
 
-    var tween = TweenMax.to('.section--cover', 1 /* 持续时间*/ , {
-      x: '-100%'
-      // rotationY: 180,
-      // x: '100%',
-      // repeat: 2,
-      // scale: .5,
-      // ease:Back.easeOut
-    })
+    
+    var wipeAnimation = new TimelineMax()
+                .fromTo(".section--tech-overview", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
+                .fromTo(".section--work-experience", 1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+                .fromTo(".section--project-mno", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone})
+                .fromTo(".section--project-pqr", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone})
     var sceneCover = new ScrollMagic.Scene({
-        triggerElement: '#main',
-        // offset: 10,
-        duration: winHeight
+        triggerElement: '.sections',
+        triggerHook: "onLeave",
+        duration: '400%' // 4个图 100% 表示 屏幕高度
       })
-      .setTween(tween)
-      // .setPin('.section--cover h1')
+      .setPin('.sections')
+      .setTween(wipeAnimation)
+      // .addIndicators() for debugger
       .addTo(controller)
-      .addIndicators()
   })()
 
   ;(function() {
