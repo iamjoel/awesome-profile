@@ -29,6 +29,28 @@ $(document).ready(function () {
           ease: Strong.easeOut
         })
       })
+    },
+    'tech-overview': function () {
+      var tl = new TimelineMax({repeat:1, repeatDelay:1, yoyo:true})
+      // 对一群对象做操作
+      tl.staggerTo('.section--tech-overview li', .2 , {
+        className:"+=superShadow",
+        top:"-=10px",
+        ease:Power1.easeOut
+      }, .8, "start"/* 最终状态 */)
+    },
+    'work-experience': function () {
+      var $target = $('.section--work-experience .bg')
+      $target.css('transform', 'translateX(-100%)')
+      TweenMax.fromTo($target[0], 2, {
+        x: '-' + winW + 'px'
+      },{
+        x: 0,
+        ease:Power1.easeIn
+      })
+    },
+    'project-mno': function () {
+      
     }
   }
 
