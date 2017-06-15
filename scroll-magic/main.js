@@ -14,7 +14,7 @@ $(document).ready(function() {
       // scale: .5,
       // ease:Back.easeOut
     })
-    // return
+    return
     var sceneCover = new ScrollMagic.Scene({
         triggerElement: '.section--cover',
         duration: winHeight - 100

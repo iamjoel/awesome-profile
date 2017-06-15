@@ -1,0 +1,12 @@
+body {
+  font-size: 16px;
+}
+h1{
+  text-align: center;
+}
+.section{
+  padding: 0 10px;
+}
+.section--basic li{
+  transform: translateX(-6.4rem);
+}
